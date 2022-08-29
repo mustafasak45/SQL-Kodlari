@@ -71,8 +71,8 @@ drop table talebeler CASCADE
 
 --Talebeler tablosundaki isim sutununa NOT NULL kisitlamasi ekleyiniz ve veri tipini VARCHAR(30) olarak degisitiriniz
 alter table talebeler
-alter column isim type varchar(30),
-alter column isim set not null;
+alter column isim type varchar(30),--type modifiye et,data turunde değişiklik yap anlamındadır
+alter column isim set not null; --set ile ekleme yaptık
 
 --talebeler tablosundaki yazılı_notu sutununa 60 dan buyuk rakam girebilsin
 
@@ -196,3 +196,6 @@ select * from personel where isim like '%t';
 
 --Isminin ikinci harfi e olan personeli listeleyiniz
 select * from personel where isim like '_e%';
+
+-- Soru9 :Isminin 3.harfi r olan personeli listeleyiniz
+select * from personel Where isim LIKE '__r%';
